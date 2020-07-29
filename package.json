@@ -1,0 +1,29 @@
+{
+  "name": "puggo-tool",
+  "version": "1.0.0",
+  "description": "```\r pip install awscli-local\r aws --endpoint-url=http://localhost:4572 s3 mb s3://{NAME}\r awslocal s3 mb s3://{NAME}\r ```",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -p tsconfig.json -c tsint.json",
+    "local": "serverless offline",
+    "deploy": "serverless deploy",
+    "test": "jest"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.59",
+    "serverless-offline": "^6.5.0",
+    "serverless-plugin-typescript": "^1.1.9",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
